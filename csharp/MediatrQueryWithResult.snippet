@@ -6,23 +6,23 @@
             <Author>flabbert</Author>
             <Description>Creates a new MediatR command with result.</Description>
             <HelpUrl></HelpUrl>
-            <Shortcut>mcmdr</Shortcut>
+            <Shortcut>mqmdr</Shortcut>
         </Header>
         <Snippet>
             <Code Kind="method decl" Language="CSharp">
-<![CDATA[public static class $CommandName$
+<![CDATA[public static class $QueryName$
 {
-    public sealed class Command() : IRequest<$ResultType$>
+    public sealed class Query() : IRequest<$ResultType$>
     {
         
     }
-    public sealed class CommandHandler : IRequestHandler<Command, $ResultType$>
+    public sealed class QueryHandler : IRequestHandler<Query, $ResultType$>
     {
-        public CommandHandler()
+        public QueryHandler()
         {
         }
 
-        public Task<$ResultType$> Handle(Command command, CancellationToken cancellationToken)
+        public Task<$ResultType$> Handle(Query query, CancellationToken cancellationToken)
         {
             $end$
         }
@@ -31,9 +31,9 @@
       </Code>
             <Declarations>
                 <Literal>
-                    <ID>CommandName</ID>
-                    <ToolTip>Name of the command.</ToolTip>
-                    <Default>NewCommand</Default>
+                    <ID>QueryName</ID>
+                    <ToolTip>Name of the Query.</ToolTip>
+                    <Default>NewQuery</Default>
                 </Literal>
                 <Literal>
                     <ID>ResultType</ID>
